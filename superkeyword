@@ -1,0 +1,22 @@
+public class Animal2 {
+    String name = "Animal";
+
+    void eat() {
+        System.out.println("Animal eat");
+    }
+}
+
+class Monkey extends Animal2 {
+    String name = "Monkey";
+
+    void jump() {
+        super.eat();
+        System.out.println("Monkey jumping ");
+        System.out.println(super.name);
+    }
+
+    public static void main(String[] args) {
+        Monkey m = new Monkey();
+        m.jump();
+    }
+}
