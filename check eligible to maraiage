@@ -1,0 +1,20 @@
+//check eligible to marraige 
+
+
+class Age{
+    public static void main(String [] args)
+    {
+        int by=2003;
+        int cy=2024;
+        System.out.println(cy-by);
+        int age=23;
+
+        if(age>=21)
+        {
+          System.out.println("Eligibe To Maaraige");
+        }   
+        else{
+            System.out.println("Not Eligible To Marraige");
+        }
+    }
+}
