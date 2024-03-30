@@ -1,0 +1,22 @@
+//create construtor
+
+
+class Main{
+    int rollno;
+    Main(int n){
+       rollno=n;
+    }
+    void display(){
+        System.out.println(rollno);
+    }
+    public static void main(String[] args)
+    {
+        Main n=new Main(31);
+        n.display();
+
+    }
+}
+
+
+
+
