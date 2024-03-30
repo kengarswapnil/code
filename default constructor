@@ -1,0 +1,14 @@
+//default constructor
+
+
+class Main{
+       Main(){
+    //     System.out.println("Hello");
+ }
+     int rollno;
+    String name;
+     public static void main(String[] args)
+     {
+         Main n=new Main();
+         System.out.println(n.rollno+n.name);
+     }
