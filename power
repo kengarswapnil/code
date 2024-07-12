@@ -1,0 +1,19 @@
+Rcursion using Power
+
+public class Solution2 {
+    public static int Power(int x,int n ){
+       if(n!=0){
+        return  x * Power(x, n-1);
+       }
+       else
+       {
+          return 1;
+       }
+    }
+    public static void main(String[] args) {
+    
+      int res =  Power(20,2);
+      System.out.println(res);
+        
+    }
+}
