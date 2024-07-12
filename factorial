@@ -1,0 +1,23 @@
+
+Recursion using factorial
+
+public class Solution {
+
+    public static int  Fact(int n){
+        if(n==1){
+            //   return n*Fact(n-1);
+            return 1;
+        }
+        int fact1 = Fact(n-1);
+        int fact2 = n*fact1;
+        return fact2;
+        // else{
+        //    return 1;
+        // }
+    }
+    public static void main(String[] args) {
+        int res = Fact(5);
+        System.out.println(res);
+
+    }
+}
