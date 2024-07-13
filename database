@@ -1,0 +1,23 @@
+//create database
+
+
+create database clg;
+
+create table empolye(
+rollno int primary key,
+first_name varchar(50),
+last_name varchar(50)
+);
+
+insert into empolye values (27,'swapnil','kengar');
+insert into empolye values (28,'mahi','dhoni');
+
+alter table empolye add column phone varchar(50);
+update empolye set phone=9579943480 where rollno=27;
+update empolye set phone=9579943480 where rollno=28;
+delete from empolye where rollno=28;
+insert into empolye values (26,'alok','kaluke');
+
+select * from empolye order by rollno desc;
+
+select * from empolye;
