@@ -1,0 +1,26 @@
+
+
+//check arrya sorted or not
+
+
+public class Sorted {
+    public static boolean issorted(int a[],int idx){
+        if(idx==a.length-1){         ///base case  if array is equal to idx then print true
+            return true;
+        }
+        if(a[idx]<=a[idx+1]){              ///then arrya less than return issorted
+            return issorted(a, idx+1);
+        }else{
+            return false;                 //then false
+        }
+    }
+    public static void main(String[] args) {
+        int a[]={1,2,2,1,3,4};
+
+       System.out.println(issorted(a, 0));  //print print result
+        
+    }
+}
+
+
+
