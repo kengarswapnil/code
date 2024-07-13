@@ -1,0 +1,26 @@
+//move all  'x' to the end of string
+
+public class Solution3 {
+
+    public static void print(String str,int idx,int count ,String newString) {
+        if(idx==str.length()){
+            for(int i=0;i<=count;i++){
+                newString+='x';
+            }
+            System.out.print(newString);
+            return;
+        }
+        char currchar = str.charAt(idx);
+        if(currchar=='x'){
+            count++;
+            print(str, idx+1, count, newString);
+        }else{
+            newString+=currchar;
+            print(str, idx+1, count, newString);
+        }
+    }
+    public static void main(String[] args) {
+        String str ="axbcxxd";
+        print(str, 0, 0, "");
+    }
+}
