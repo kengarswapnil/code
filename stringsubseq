@@ -1,0 +1,23 @@
+// print all char subsequce
+
+public class Recursion {
+    public static void subseq(String str,int idx,String newsString){
+        if(idx==str.length()){
+            System.out.println(newsString);
+            return;
+        }
+
+        char currchar = str.charAt(idx);
+
+        //to 
+        subseq(str, idx+1, newsString+currchar);
+//  not to be
+
+
+        subseq(str, idx+1, newsString);
+    }
+    public static void main(String[] args) {
+        String str ="abc";//"abbccda";
+        subseq(str, 0, "");
+    }
+}
