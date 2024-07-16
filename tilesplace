@@ -1,0 +1,21 @@
+
+
+public class Place {
+    public static int placeTiles(int n,int m){
+        if(n==m){
+            return 0;
+        }
+        if(n<m){
+            return 1;
+        }
+        int vertplace=placeTiles(n-m, m);
+        int horplace=placeTiles(n-1, m);
+        return vertplace+horplace;
+    }
+    public static void main(String[] args) {
+        int n=2;
+        int m=3;
+        System.out.println(placeTiles(n, m));
+        
+    }
+}
