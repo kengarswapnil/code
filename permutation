@@ -1,0 +1,21 @@
+
+
+public  class Permutation{
+    public static void print(String str,String permut){
+        if(str.length()==0){                  ///  str equal to 0 print permut
+            System.out.println(permut);
+            return;
+        }
+        for(int i=0;i<str.length();i++){       //
+            char currchar = str.charAt(i);      //define charcter
+            String  newstr= str.substring(0,i)+str.substring(i+1); //substring 0 to i + sub(i+1)
+            print(newstr,permut+currchar);                                     //return fun
+        }
+    }
+    public static void main(String[] args){
+
+        String str="ABCD";
+        print(str,"");
+
+    }
+}
