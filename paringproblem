@@ -1,0 +1,22 @@
+
+
+
+public class Invite {
+    public static int printInvite(int n){
+         
+        if(n<=1){
+            return 1;
+
+        }
+
+        int ways1=printInvite(n-1);
+        int ways2=(n-1)*printInvite(n-2);
+
+        return ways1+ways2;
+    }
+    public static void main(String[] args) {
+        int n=3;
+        System.out.println(printInvite(n));
+        
+    }
+}
