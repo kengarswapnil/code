@@ -1,0 +1,22 @@
+public class Countpath {
+    public static int printcount(int i,int j,int n,int m)
+    {
+        if(i==n || j==n){
+            return 0;
+        }
+        if(i==n-1 || j==m-1){
+            return 1;
+        }
+
+        int downpath=printcount(i+1, j, n, m);
+
+        int rightpath = printcount(i, j+1, n, m);
+
+        return downpath+rightpath;
+    }
+    public static void main(String[] args) {
+          int n=3,m=3;
+          int total=printcount(0, 0, n, m);
+          System.out.println(total);
+    }
+}
