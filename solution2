@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);  
+       // Read lines until end-of-file (EOF)
+        int lineNumber = 1; // Initialize line number
+        
+        // Read each line until there are no more lines
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            
+            // Output the line with its line number
+            System.out.println(lineNumber + " " + line);
+            
+            lineNumber++; // Increment line number
+        }
+    }
+}
