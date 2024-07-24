@@ -1,0 +1,23 @@
+import java.io.*;
+
+
+
+public class Writefile {
+
+
+    public static void main(String[] args) {
+        
+        try{
+            FileWriter writer = new FileWriter("C:\\Users\\kenga\\swapnil12.txt");
+            writer.write("java is oops");
+            writer.close();
+            System.out.println("scessufully");
+        }catch(IOException e){
+            System.out.println("error");
+            e.printStackTrace();
+        }
+
+    }
+}
+
+
