@@ -1,0 +1,66 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentGradeTracker {
+
+    public static void main(String[] args) {
+        ArrayList<Double> grades = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        double sum = 0;
+
+        System.out.println("Enter student grades. Type '-1' to stop entering grades.");
+
+        while (true) {
+            System.out.print("Enter grade: ");
+            double grade = scanner.nextDouble();
+            
+            if (grade == -1) {
+                break;
+            }
+
+            if (grade < 0 || grade > 100) {
+                System.out.println("Please enter a valid grade between 0 and 100.");
+                continue;
+            }
+
+            grades.add(grade);
+            sum += grade;
+        }
+
+        if (grades.size() == 0) {
+            System.out.println("No grades were entered.");
+        } else {
+            double average = sum / grades.size();
+            double highest = getHighestGrade(grades);
+            double lowest = getLowestGrade(grades);
+
+            System.out.println("\nGrade Summary:");
+            System.out.println("Total number of grades: " + grades.size());
+            System.out.println("Average grade: " + average);
+            System.out.println("Highest grade: " + highest);
+            System.out.println("Lowest grade: " + lowest);
+        }
+
+        scanner.close();
+    }
+
+    private static double getHighestGrade(ArrayList<Double> grades) {
+        double highest = grades.get(0);
+        for (double grade : grades) {
+            if (grade > highest) {
+                highest = grade;
+            }
+        }
+        return highest;
+    }
+
+    private static double getLowestGrade(ArrayList<Double> grades) {
+        double lowest = grades.get(0);
+        for (double grade : grades) {
+            if (grade < lowest) {
+                lowest = grade;
+            }
+        }
+        return lowest;
+    }
+}
